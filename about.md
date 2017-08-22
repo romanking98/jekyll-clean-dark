@@ -4,4 +4,4 @@ title: About
 
 ---
 
-# `cat /dev/urandom`
+# cat /dev/urandom

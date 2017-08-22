@@ -1,7 +1,7 @@
 # Jekyll configuration
 
-name: Blog Name
-description: Software Developer
+name: Pwn
+description: lol
 
 # Url is currently only used only for the RSS feed in feed.xml
 url: http://romanking98.github.io
@@ -35,8 +35,8 @@ yandex_metrica:
 # Set this to your disqus shortname to enable comments. Note that the 'comments'
 # setting below must also be true. Individual posts can override 'comments' to
 # disable on a post-by-post basis
-disqus: streetturtle
-comments: false
+disqus: romanking98
+comments: true
 
 permalink: /:year/:month/:title
 

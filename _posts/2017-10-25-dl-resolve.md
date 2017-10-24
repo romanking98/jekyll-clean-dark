@@ -43,12 +43,13 @@ Section Headers:
   [29] .strtab           STRTAB          00000000 000ef0 0002bc 00      0   0  1
 ```
 
-dl_resolve(link_map,<some_pushed_val>)
+dl_resolve(link_map,r_info)
+
 link_map: linked list
 
 ### What is symtab ?
 
-Meaning of this statement: ` Elf32_Sym *sym = &SYMTAB[((reloc->r_info)>>8)] `
+Meaning of this statement: ``` Elf32_Sym *sym = &SYMTAB[((reloc->r_info)>>8)] ```
 reloc is pointer to relocation table. It finds something called r_info from there. Uses that and indexes from *SYMTAB* . Where is this magical
 symbol table ?
 

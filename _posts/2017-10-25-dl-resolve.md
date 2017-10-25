@@ -168,7 +168,13 @@ gef> x/xw 0x080486c4
 0x80486c4 <_fini>:	0x08ec8353
 ```
 
-Basically pointers to _init, __global_dtors_aux (The kind of things u definitely wanna overwrite with a fms ;)
+It contains pointers to ALL the sections of the ELF. Compare with the result you get from ```readelf -S warehouse```.
+
+
+In the warehouse exploit, we were NULLifying an address which contained a pointer to the last entry of the .dynamic section.
+This means that linkmap + 0xe4 (which contains this magical address) has something to do with the process......Its __Imp__.
+
+
 
 Finally, now that the ELF knows everything about the function it has to find in the libc, it resolves it.
 

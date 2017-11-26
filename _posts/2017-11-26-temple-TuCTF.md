@@ -129,7 +129,6 @@ The string called "Neonate" is actually printed everytime we free. So we can ove
 
 ### Exploit
 
-(Thanks to rex for making me realise something really stupid that I missed. )
 Finally, we overwrite the `FD` pointer of the chunk and make it point to a GOT address instead of our normal heap data chunk.
 Then we can use the `rethink` function to edit it. (Thanks rex for making me realise this......Partial RELRO is just LOLZZZ)
 
